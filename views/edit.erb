@@ -1,0 +1,19 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>メモの編集</h1>
+  <form method="post" action="http://localhost:4567/memo_data/<%= @id%>"> 
+    <div>
+      タイトル:<input type="text" name="title" value="<%= @hash["title"]%>">
+    </div>
+    <div>
+      本文:
+      <textarea name="message" rows="5"><%= @hash["message"]%></textarea>
+    </div>
+    <input type="hidden" name="_method" value="PATCH"> 
+    <input type="submit" value="編集">
+  </form>
+</body>
+</html>

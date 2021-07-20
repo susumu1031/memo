@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <title>メモアプリ</title>
+</head>
+<body>
+<h1>メモ一覧</h1>
+<% @hash.each do |hash| %>
+  <li><a href="/memo_data/<%= hash["id"] %>"><%= hash["title"] %></br><%= hash["time"] %></a></li>
+<% end %>
+
+<h2>新規メモ作成</h2>
+<a href="/memo/new">新規作成</a>
+</body>
+</html>
+
