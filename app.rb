@@ -10,8 +10,8 @@ helpers do
 end
 
 get '/memo' do
-  memos = Dir.glob("memo_data/*")
-  @hash = memos.map {|x| JSON.load(File.read(x))}
+  memos = Dir.glob('memo_data/*')
+  @hash = memos.map { |x| JSON.load(File.read(x)) }
   erb :memo_top
 end
 
@@ -24,8 +24,8 @@ post '/memo_data' do
   @message = params[:message]
   @id = params[:id]
   @time = Time.now
-  hash = { "id" => SecureRandom.uuid, "title" => @title, "message" => h(@message), "time" => @time }
-  File.open("memo_data/#{hash["id"]}.json", "w") do |file|
+  hash = { 'id' => SecureRandom.uuid, 'title' => @title, 'message' => h(@message), 'time' => @time }
+  File.open("memo_data/#{hash['id']}.json", 'w') do |file|
     JSON.dump(hash, file)
   end
   redirect to('/memo')
@@ -42,7 +42,7 @@ end
 get '/memo_data/:id/edit' do
   @id = params[:id]
   File.open("memo_data/#{@id}.json") do |file|
-   @hash = JSON.load(file)
+    @hash = JSON.load(file)
   end
   erb :edit
 end
@@ -52,8 +52,8 @@ patch '/memo_data/:id' do
   @title = params[:title]
   @message = params[:message]
   @time = Time.now
-  hash = { "id" => @id, "title" => @title, "message" => h(@message), "time" => @time }
-  File.open("memo_data/#{@id}.json", "w") do |file|
+  hash = { 'id' => @id, 'title' => @title, 'message' => h(@message), 'time' => @time }
+  File.open("memo_data/#{@id}.json", 'w') do |file|
     JSON.dump(hash, file)
   end
   redirect to('memo')

@@ -1,0 +1,148 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1{
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  padding: 10px 50px; 
+  font-size: 1.5em;
+}
+
+.memo_index{
+  width: 500px;
+  line-height: 50px;
+  text-align: left;
+  padding: 10px 40px; 
+}
+
+h2{
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  padding: 10px 50px;
+  font-size: 1.5em;
+}
+
+section {
+  max-width: 300px;
+  margin: 0 50px;
+}
+.btn_02 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #228bc8;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 0 6% 0 12%;
+  color: #228bc8;
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  position: relative;
+  transition-duration: 0.2s;
+}
+.btn_02:hover {
+  background: #228bc8;
+  color: #fff;
+}
+.btn_02:before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 8px;
+  border-color: transparent transparent transparent #228bc8;
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  margin-top: -7px;
+}
+.btn_02:hover:before {
+  border-color: transparent transparent transparent #fff;
+}
+
+ul{
+  color: #1e366a;
+  border-top: solid #1e366a 1px;/*上のボーダー*/
+  border-bottom: solid #1e366a 1px;/*下のボーダー*/
+  padding: 0.5em 0 0.5em 1.5em;
+  margin: 0 50px;
+  list-style-type: disc;
+}
+
+ul li{
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+
+.memo_detail{
+  height: 85px;
+  line-height: 30px;
+  text-align: left;
+  border-top: solid #1e366a 1px;/*上のボーダー*/
+  border-bottom: solid #1e366a 1px;/*下のボーダー*/
+  padding: 0.5em 0 0.5em 1.5em;
+  margin: 0 50px;
+}
+
+.memo_essay{
+  padding: 10px 15px;
+  position: relative;
+  top: 10px;
+}
+
+.next{
+  position: relative;
+	top: 10px;
+}

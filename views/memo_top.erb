@@ -2,16 +2,20 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8"/>
-  <title>メモアプリ</title>
+  <link rel="stylesheet" href="/style.css" />
+  <title>メモ</title>
 </head>
 <body>
-<h1>メモ一覧</h1>
+<h1>メモ</h1>
+<ul class="memo_index">
 <% @hash.each do |hash| %>
-  <li><a href="/memo_data/<%= hash["id"] %>"><%= hash["title"] %></br><%= hash["time"] %></a></li>
+  <li><a href="/memo_data/<%= hash["id"] %>"><span><%= hash["title"] %></span><%= hash["time"] %></a></li>
 <% end %>
-
+</ul>
 <h2>新規メモ作成</h2>
-<a href="/memo/new">新規作成</a>
+<section>
+<a href="/memo/new" class="btn_02">新規作成</a>
+</section>
 </body>
 </html>
 
