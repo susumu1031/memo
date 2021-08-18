@@ -1,6 +1,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+
 </head>
 <body>
   <h1>メモの編集</h1>
@@ -10,7 +11,7 @@
     </div>
     <div>
       本文:
-      <textarea name="message" rows="5"><%= @hash["message"]%></textarea>
+      <textarea name="message" rows="5"><%= @hash["message"] %></textarea>
     </div>
     <input type="hidden" name="_method" value="PATCH"> 
     <input type="submit" value="編集">

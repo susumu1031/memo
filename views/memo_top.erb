@@ -9,7 +9,7 @@
 <h1>メモ</h1>
 <ul class="memo_index">
 <% @hash.each do |hash| %>
-  <li><a href="/memo_data/<%= hash["id"] %>"><span><%= hash["title"] %></span><%= hash["time"] %></a></li>
+  <li><a href="/memo_data/<%= hash["id"] %>"><span><%= h hash["title"] %></span><%= h hash["time"] %></a></li>
 <% end %>
 </ul>
 <h2>新規メモ作成</h2>
