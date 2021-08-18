@@ -1,0 +1,27 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/style.css" />
+  <title>メモ詳細</title>
+</head>
+<body>
+  <h1>メモ詳細</h1>
+  <div class="memo_detail">
+    <p>
+    　<%= h @hash["title"]%>
+    </p>  
+    <p class="memo_essay">
+      <%= h @hash["message"]%>
+    </p>    
+  </div>
+  <section class="next">
+  <a href="/memo_data/<%= @hash["id"]%>/edit" class="btn_02">編集</a>
+  </section></br>
+  <section>
+  <form method="post" action="http://localhost:4567/memo_data/<%= @id%>">
+    <p><input type="hidden" name="_method" value="DELETE"></p>
+    <p><input type="submit" value="削除" class="btn_02"></p>
+  </form>
+  </section>
+</body>
+</html>

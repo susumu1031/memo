@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="/style.css" />
+  <title>メモ</title>
+</head>
+<body>
+<h1>メモ</h1>
+<ul class="memo_index">
+<% @hash.each do |hash| %>
+  <li><a href="/memo_data/<%= hash["id"] %>"><span><%= hash["title"] %></span><%= h hash["time"] %></a></li>
+<% end %>
+</ul>
+<h2>新規メモ作成</h2>
+<section>
+<a href="/memo/new" class="btn_02">新規作成</a>
+</section>
+</body>
+</html>
+
