@@ -8,10 +8,10 @@
   <h1>メモ詳細</h1>
   <div class="memo_detail">
     <p>
-    　<%=@hash["title"]%>
+    　<%= h @hash["title"]%>
     </p>  
     <p class="memo_essay">
-      <%=@hash["message"]%>
+      <%= h @hash["message"]%>
     </p>    
   </div>
   <section class="next">

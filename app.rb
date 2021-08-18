@@ -2,6 +2,8 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'json'
 require 'securerandom'
+require 'erb'
+include ERB::Util
 
 helpers do
   def h(text)
